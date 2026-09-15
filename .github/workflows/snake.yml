@@ -1,0 +1,29 @@
+name: contribution snake
+
+on:
+  schedule:
+    - cron: '30 3 * * *'
+  workflow_dispatch: {}
+
+permissions:
+  contents: write
+
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk/svg-only@v3
+        with:
+          github_user_name: kouji999
+          outputs: |
+            dist/github-contribution-grid-snake.svg?color_background=0e1424&color_snake=23D3C3
+            dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_background=0d1117&color_snake=E8C877
+
+      - uses: crazy-max/ghaction-github-pages@v4
+        with:
+          target_branch: output
+          build_dir: dist
+          keep_history: true
+          jekyll: false
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}

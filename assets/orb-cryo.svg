@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="88" height="88" viewBox="0 0 88 88"><title>cryo orb</title><desc>A glowing cryo-colored elemental orb emblem.</desc><style><![CDATA[
+@keyframes twinkle { 0%,100%{opacity:.15} 50%{opacity:1} }
+.tw { animation: twinkle 3.4s ease-in-out infinite; }
+.vglow{animation:glow 3.6s ease-in-out infinite}
+@keyframes glow{0%,100%{opacity:.18}50%{opacity:.42}}
+.rim{animation:spin 18s linear infinite;transform-origin:44px 44px}
+@keyframes spin{to{transform:rotate(360deg)}}
+]]></style>
+<circle class="vglow" cx="44" cy="44" r="36" fill="#9ee7ff" opacity=".14"/><circle class="rim" cx="44" cy="44" r="33" fill="none" stroke="#9ee7ff" stroke-opacity=".5" stroke-width="1" stroke-dasharray="3 7"/>
+<circle cx="44" cy="44" r="27" fill="#101828" stroke="#e8c877" stroke-width="2"/>
+<text x="44" y="53" text-anchor="middle" font-size="22" fill="#9ee7ff">❆</text>
+<circle class="tw" cx="44" cy="8" r="2" fill="#9ee7ff"/>
+</svg>
