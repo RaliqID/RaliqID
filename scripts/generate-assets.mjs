@@ -171,5 +171,50 @@ writeFileSync(OUT + 'relic.svg', `<svg xmlns="http://www.w3.org/2000/svg" width=
 <circle class="tw" cx="48" cy="48" r="4" fill="${TEAL}"/></g>
 </svg>`);
 
+// ---------- typing intro (original, self-animated) ----------
+writeFileSync(OUT + 'intro-typing.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="470" height="128" viewBox="0 0 470 128"><title>Raliq Hidayat — fullstack traveler, Teyvat is wide. So is the stack.</title><desc>Three typing lines in gold serif with a blinking cursor.</desc><style><![CDATA[.t{font-family:Georgia,'Times New Roman',serif;fill:${GOLD};letter-spacing:3}
+.l1{clip-path:inset(0 100% 0 0);animation:type1 12s steps(22) infinite}
+.l2{clip-path:inset(0 100% 0 0);animation:type2 12s steps(20) infinite}
+.l3{clip-path:inset(0 100% 0 0);animation:type3 12s steps(34) infinite}
+@keyframes type1{0%{clip-path:inset(0 100% 0 0)}12%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes type2{0%,14%{clip-path:inset(0 100% 0 0)}28%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes type3{0%,30%{clip-path:inset(0 100% 0 0)}50%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+]]></style>
+<text class="t l1" x="235" text-anchor="middle" y="34" font-size="22">RALIQ HIDAYAT</text>
+<text class="t l2" x="235" text-anchor="middle" y="66" font-size="17">FULLSTACK TRAVELER</text>
+<text class="t l3" x="235" text-anchor="middle" y="96" font-size="12.5">TEYVAT IS WIDE. SO IS THE STACK.</text>
+<text class="cur" x="235" y="118" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12" fill="${TEAL}">▮</text>
+</svg>`);
+
+// ---------- talents panel (replaces shields flood) ----------
+{
+  const rows = [
+    { n: 'LARAVEL', lv: 92, c: '#ff9a3c' }, { n: 'REACT', lv: 90, c: '#23d3c3' },
+    { n: 'PHP', lv: 90, c: '#f7c644' }, { n: 'TYPESCRIPT', lv: 87, c: '#4cc2f2' },
+    { n: 'NEXT.JS', lv: 86, c: '#9ee7ff' }, { n: 'MYSQL', lv: 86, c: '#e8c877' },
+    { n: 'NODE.JS', lv: 85, c: '#b58ee8' }, { n: 'PYTHON', lv: 80, c: '#84c456' },
+    { n: 'LUA · ROBLOX', lv: 78, c: '#c45cff' }, { n: 'BLENDER · WEBGL', lv: 75, c: '#e06c9f' },
+  ];
+  const bar = (x, y, t) => {
+    const w = Math.round(t.lv / 100 * 150);
+    return `<text x="${x}" y="${y + 11}" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="${PARCH}" letter-spacing="1">${t.n}</text>
+<rect x="${x + 150}" y="${y}" width="150" height="14" fill="#0a1226" stroke="${GOLD_DIM}" stroke-opacity=".5"/>
+<rect x="${x + 151}" y="${y + 1}" width="${w - 2}" height="12" fill="${t.c}" opacity=".85"/>
+<text x="${x + 315}" y="${y + 11}" font-family="ui-monospace,Consolas,monospace" font-size="11" fill="${t.c}">Lv.${t.lv}</text>`;
+  };
+  writeFileSync(OUT + 'talents.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="230" viewBox="0 0 1012 230"><title>Ascended talents — framework levels in the Talent Court</title><desc>Ten framed talent plaques with level bars, Teyvat palette.</desc><style><![CDATA[${twinkleCSS}]]></style>
+<defs><linearGradient id="tb" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${NAVY2}"/><stop offset="1" stop-color="${NAVY}"/></linearGradient></defs>
+<rect x="1" y="1" width="1010" height="228" rx="4" fill="url(#tb)" stroke="${GOLD}" stroke-opacity=".45"/>
+<rect x="7" y="7" width="998" height="216" rx="2" fill="none" stroke="${GOLD}" stroke-opacity=".18"/>
+<text x="34" y="34" font-family="ui-monospace,Consolas,monospace" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">TALENT COURT — ASCENDED constellations</text>
+<line x1="34" y1="44" x2="978" y2="44" stroke="${GOLD}" stroke-opacity=".3"/>
+${rows.slice(0, 5).map((t, i) => bar(60, 64 + i * 30, t)).join('\n')}
+${rows.slice(5).map((t, i) => bar(540, 64 + i * 30, t)).join('\n')}
+<text class="tw" x="506" y="218" text-anchor="middle" font-family="Georgia,serif" font-size="11" fill="${TEAL}" opacity=".7">✦ every point spent deliberately ✦</text>
+</svg>`);
+}
+
 console.log('assets generated');
 
