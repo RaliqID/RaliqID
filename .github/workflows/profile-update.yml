@@ -24,7 +24,7 @@ jobs:
             const login = 'kouji999';
             const from = new Date(Date.now() - 365 * 864e5).toISOString();
             const q = `query($login:String!,$from:DateTime!){ user(login:$login){
-              contributionsCollection(from:$from){ totalContributions totalCommitContributions totalPullRequestContributions totalPullRequestReviewContributions totalIssueContributions totalRepositoryContributions contributionCalendar{ weeks{ contributionDays{ date contributionCount }}}}
+              contributionsCollection(from:$from){ totalCommitContributions totalPullRequestContributions totalPullRequestReviewContributions totalIssueContributions totalRepositoryContributions contributionCalendar{ totalContributions weeks{ contributionDays{ date contributionCount }}}}
               repositories(first:50, privacy:PUBLIC, orderBy:{field:PUSHED_AT,direction:DESC}){ nodes{ name description isFork primaryLanguage{ name } stargazerCount } }
             }}`;
             const data = await github.graphql(q, { login, from });
@@ -35,7 +35,7 @@ jobs:
               .slice(0, 15)
               .map(r => ({ name: r.name, desc: r.description || (r.isFork ? 'fork — kept in orbit' : 'undocumented world'), lang: r.primaryLanguage ? r.primaryLanguage.name : 'Other', stars: r.stargazerCount }));
             const stats = {
-              total: cc.totalContributions,
+              total: cc.contributionCalendar.totalContributions,
               commits: cc.totalCommitContributions,
               prs: cc.totalPullRequestContributions,
               reviews: cc.totalPullRequestReviewContributions,
