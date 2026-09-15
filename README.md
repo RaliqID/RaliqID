@@ -161,6 +161,23 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </tr>
 </table>
 
+<br>
+
+<table width="100%">
+<tr>
+<td width="50%" align="center">
+
+<a href="https://github.com/kouji999/forge"><img src="https://github-stats-extended.vercel.app/api/pin/?username=kouji999&repo=forge&bg_color=0e1424&title_color=E8C877&text_color=8A93AD&icon_color=23D3C3&border_color=2A3554" width="490" alt="Featured repo card: FORGE — AI Product Engineering workspace" loading="lazy"></a>
+
+</td>
+<td width="50%" align="center">
+
+<a href="https://github.com/kouji999/noir-studio"><img src="https://github-stats-extended.vercel.app/api/pin/?username=kouji999&repo=noir-studio&bg_color=0e1424&title_color=E8C877&text_color=8A93AD&icon_color=23D3C3&border_color=2A3554" width="490" alt="Featured repo card: NOIR — dark editorial studio landing with WebGL 3D" loading="lazy"></a>
+
+</td>
+</tr>
+</table>
+
 <img src="./assets/divider.svg" width="1012" alt="">
 
 <img src="./assets/plate-commissions.svg" width="1012" alt="Section header, Chapter III: Daily Commissions">
