@@ -1,0 +1,93 @@
+// Renders dist/adventure.svg + dist/constellation.svg from stats.json.
+// stats.json is written by .github/workflows/profile-update.yml (GitHub GraphQL, own token — never "failed to retrieve").
+// Local dev: drop a stats.json next to the repo root and run `node scripts/render-stats.mjs`.
+import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
+
+const NAVY = '#0e1424', NAVY2 = '#131b2e', GOLD = '#e8c877', GOLD_DIM = '#8a7443', TEAL = '#7fd8cf', PARCH = '#efe6d0', DIM = '#6d7a99', FIRE = '#ff9a3c';
+const elColors = ['#23d3c3', '#ff9a3c', '#4cc2f2', '#b58ee8', '#f7c644', '#9ee7ff', '#98e6af'];
+
+const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
+
+const stats = JSON.parse(readFileSync('stats.json', 'utf8'));
+mkdirSync('dist', { recursive: true });
+const updated = new Date().toISOString().slice(0, 10);
+
+// ---------- streaks ----------
+const days = stats.days.map(d => d.count ?? d.contributionCount ?? 0);
+let i = days.length - 1, current = 0;
+if (days[i] === 0) i--;                       // today may still be empty
+while (i >= 0 && days[i] > 0) { current++; i--; }
+let longest = 0, run = 0;
+for (const c of days) { if (c > 0) { run++; if (run > longest) longest = run; } else run = 0; }
+
+// ---------- adventure.svg ----------
+const heat = ['#0f1526', '#173a38', '#1f6a5e', '#2ba18b', '#7fd8cf'];
+const lvl = c => (c === 0 ? 0 : c <= 2 ? 1 : c <= 4 ? 2 : c <= 6 ? 3 : 4);
+const cells = [];
+for (let x = 0; x * 7 < days.length; x++)
+  for (let y = 0; y < 7; y++) {
+    const c = days[x * 7 + y]; if (c === undefined) continue;
+    cells.push(`<rect x="${510 + x * 9}" y="${56 + y * 9}" width="7" height="7" rx="1.5" fill="${heat[lvl(c)]}"/>`);
+  }
+
+const langCount = {};
+for (const r of stats.repos) langCount[r.lang] = (langCount[r.lang] || 0) + 1;
+const topLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1]).slice(0, 5);
+const langsSvg = topLangs.map((t, n) => {
+  const y = 128 + n * 15;
+  const w = Math.max(Math.round(t[1] / stats.repos.length * 170), 8);
+  return `<text x="40" y="${y}" font-family="ui-monospace,Consolas,monospace" font-size="9.5" fill="${DIM}">${esc(t[0])}</text>
+<rect x="132" y="${y - 8}" width="${w}" height="8" rx="2" fill="${elColors[n % elColors.length]}" opacity=".85"/>
+<text x="${138 + w}" y="${y}" font-family="ui-monospace,Consolas,monospace" font-size="9.5" fill="${GOLD_DIM}">${t[1]}</text>`;
+}).join('\n');
+
+writeFileSync('dist/adventure.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="220" viewBox="0 0 1012 220"><title>Adventure progress</title><desc>Stardust total, streaks, commits, pull requests, reviews, issues, stars, top languages and a 52-week Teyvat contribution heatmap. Regenerated daily from the GitHub API.</desc>
+<style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
+<defs><linearGradient id="ab" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${NAVY2}"/><stop offset="1" stop-color="${NAVY}"/></linearGradient></defs>
+<rect x="1" y="1" width="1010" height="218" rx="4" fill="url(#ab)" stroke="${GOLD}" stroke-opacity=".45"/>
+<rect x="7" y="7" width="998" height="206" rx="2" fill="none" stroke="${GOLD}" stroke-opacity=".18"/>
+<text class="m" x="40" y="36" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">STARDUST — LAST 365 DAYS</text>
+<text class="g" x="40" y="86" font-size="44" fill="${GOLD}">${stats.total}</text>
+<text class="m" x="40" y="108" font-size="11" fill="${DIM}">contributions across Teyvat</text>
+<text class="g" x="322" y="86" font-size="26" fill="${FIRE}">${current}d<tspan font-size="13" fill="${GOLD}"> · best ${longest}d</tspan></text>
+<text class="m" x="322" y="108" font-size="11" fill="${DIM}">current streak · longest</text>
+<text class="m" x="510" y="36" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">52-WEEK SKY</text>
+${cells.join('\n')}
+<text class="m" x="510" y="132" font-size="9.5" fill="${DIM}">less</text>
+${heat.map((c, n) => `<rect x="${548 + n * 16}" y="124" width="9" height="9" rx="2" fill="${c}"/>`).join('')}
+<text class="m" x="638" y="132" font-size="9.5" fill="${DIM}">more</text>
+<text class="m" x="510" y="158" font-size="10.5" fill="${PARCH}" opacity=".85">✎ ${stats.commits} commits · ⇄ ${stats.prs} pull requests · ✓ ${stats.reviews} reviews</text>
+<text class="m" x="510" y="176" font-size="10.5" fill="${PARCH}" opacity=".85">◈ ${stats.issues} issues · ★ ${stats.starsEarned} stars earned · ⌂ ${stats.repoContribs} repos</text>
+<line x1="40" y1="118" x2="470" y2="118" stroke="${GOLD}" stroke-opacity=".22"/>
+${langsSvg}
+<text class="m tw" x="972" y="204" text-anchor="end" font-size="9" fill="${TEAL}" opacity=".7">auto-charted ${updated} — no third-party API at view time</text>
+</svg>`);
+
+// ---------- constellation.svg ----------
+const per = 3, cw = 300, ch = 64, gx = 14, gy = 12, x0 = 32, y0 = 50;
+const repos = stats.repos.slice(0, 15);
+const chips = repos.map((r, idx) => {
+  const x = x0 + (idx % per) * (cw + gx);
+  const y = y0 + Math.floor(idx / per) * (ch + gy);
+  const dot = elColors[idx % elColors.length];
+  const desc = r.desc.length > 50 ? r.desc.slice(0, 49) + '…' : r.desc;
+  return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="6" fill="#0a1226" stroke="${GOLD}" stroke-opacity=".26"/>
+<circle cx="${x + 16}" cy="${y + 20}" r="4" fill="${dot}"/>
+<text class="g" x="${x + 28}" y="${y + 25}" font-size="13.5" font-weight="bold" fill="${GOLD}">${esc(r.name)}</text>
+<text class="m" x="${x + cw - 14}" y="${y + 25}" text-anchor="end" font-size="9.5" fill="${DIM}">${esc(r.lang)} · ★${r.stars}</text>
+<text class="m" x="${x + 16}" y="${y + 45}" font-size="9.5" fill="${PARCH}" opacity=".8">${esc(desc)}</text>`;
+});
+const rows = Math.max(1, Math.ceil(repos.length / per));
+const H = y0 + rows * (ch + gy) + 22;
+writeFileSync('dist/constellation.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="${H}" viewBox="0 0 1012 ${H}"><title>Repository constellation</title><desc>Every public repository as a charted plaque — name, language, stars and description. Regenerated daily, new repositories appear automatically.</desc>
+<style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
+<rect x="1" y="1" width="1010" height="${H - 2}" rx="4" fill="url(#ab2)" stroke="${GOLD}" stroke-opacity=".45"/>
+<defs><linearGradient id="ab2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${NAVY2}"/><stop offset="1" stop-color="${NAVY}"/></linearGradient></defs>
+<text class="m" x="32" y="32" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">REPOSITORY CONSTELLATION — ${repos.length} WORLDS CHARTED · UPDATED ${updated}</text>
+${chips.join('\n')}
+<text class="m tw" x="980" y="${H - 12}" text-anchor="end" font-size="9" fill="${TEAL}" opacity=".7">✦ auto-generated daily from the live repository list ✦</text>
+</svg>`);
+
+console.log('rendered dist/adventure.svg + dist/constellation.svg');
