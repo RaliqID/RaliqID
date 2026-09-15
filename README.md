@@ -161,23 +161,6 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </tr>
 </table>
 
-<br>
-
-<table width="100%">
-<tr>
-<td width="50%" align="center">
-
-<a href="https://github.com/kouji999/forge"><img src="https://github-stats-extended.vercel.app/api/pin/?username=kouji999&repo=forge&bg_color=0e1424&title_color=E8C877&text_color=8A93AD&icon_color=23D3C3&border_color=2A3554" width="490" alt="Featured repo card: FORGE — AI Product Engineering workspace" loading="lazy"></a>
-
-</td>
-<td width="50%" align="center">
-
-<a href="https://github.com/kouji999/noir-studio"><img src="https://github-stats-extended.vercel.app/api/pin/?username=kouji999&repo=noir-studio&bg_color=0e1424&title_color=E8C877&text_color=8A93AD&icon_color=23D3C3&border_color=2A3554" width="490" alt="Featured repo card: NOIR — dark editorial studio landing with WebGL 3D" loading="lazy"></a>
-
-</td>
-</tr>
-</table>
-
 <img src="./assets/divider.svg" width="1012" alt="">
 
 <img src="./assets/plate-commissions.svg" width="1012" alt="Section header, Chapter III: Daily Commissions">
@@ -246,35 +229,19 @@ CURRENT STATUS
 
 <img src="./assets/plate-achievements.svg" width="1012" alt="Section header, Chapter V: Adventure Progress">
 
-<table width="100%">
-<tr>
-<td width="56%" valign="top" align="center">
+<!-- All panels below are rendered nightly by .github/workflows/profile-update.yml
+     using the repo's own GitHub token — no third-party service can "fail to
+     retrieve" your data at view time. New repos appear in the constellation
+     automatically; numbers refresh every day. -->
+<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/adventure.svg?raw=1" width="1012" alt="Adventure progress: total stardust last 365 days, current and best streak, commits, pull requests, reviews, issues, stars earned, repos charted, top languages and a 52-week contribution heatmap in Teyvat colors">
 
-<img src="https://github-stats-extended.vercel.app/api?username=kouji999&show_icons=true&rank_icon=github&custom_title=ADVENTURE+LOG&bg_color=0e1424&title_color=E8C877&text_color=EFE6D0&icon_color=23D3C3&ring_color=E8C877&border_color=2A3554" width="500" alt="GitHub stats card">
+<br>
 
-</td>
-<td width="44%" valign="top" align="center">
+<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/constellation.svg?raw=1" width="1012" alt="Repository constellation: every public repository as a plaque with name, primary language, stars and a one-line description, re-charted nightly">
 
-<img src="https://streak-stats.demolab.com?user=kouji999&hide_border=true&background=0e1424&stroke=E8C877&ring=23D3C3&fire=FF9A3C&currStreakNum=F5D97A&sideNums=E8C877&sideLabels=8A7443&dates=6D7A99&currStreakLabel=E8C877" width="420" alt="current contribution streak">
+<br>
 
-</td>
-</tr>
-<tr>
-<td valign="top" align="center">
-
-<img src="https://github-stats-extended.vercel.app/api/top-langs/?username=kouji999&layout=compact&langs_count=8&custom_title=ELEMENTAL+AFFINITY&bg_color=0e1424&title_color=E8C877&text_color=EFE6D0&border_color=2A3554" width="340" alt="top languages by usage">
-
-</td>
-<td valign="top" align="center">
-
-<!-- generated onto the output branch by .github/workflows/snake.yml; appears after its first run -->
-<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/github-contribution-grid-snake.svg" alt="contribution-grid snake eating stars, Teyvat palette">
-
-</td>
-</tr>
-</table>
-
-<img src="https://trophy.ryglcloud.net/?username=kouji999&column=7&no-frame=true&no-bg=true&margin-w=8&theme=onedark" width="1012" alt="trophy case">
+<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/github-contribution-grid-snake.svg?raw=1" width="1012" alt="Anemo-teal snake crossing the contribution calendar under a Teyvat night sky">
 
 <img src="./assets/divider.svg" width="1012" alt="">
 
