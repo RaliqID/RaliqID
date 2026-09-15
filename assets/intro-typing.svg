@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="470" height="128" viewBox="0 0 470 128"><title>Raliq Hidayat — fullstack traveler, Teyvat is wide. So is the stack.</title><desc>Three typing lines in gold serif with a blinking cursor.</desc><style><![CDATA[.t{font-family:Georgia,'Times New Roman',serif;fill:#e8c877;letter-spacing:3}
+.l1{clip-path:inset(0 100% 0 0);animation:type1 12s steps(22) infinite}
+.l2{clip-path:inset(0 100% 0 0);animation:type2 12s steps(20) infinite}
+.l3{clip-path:inset(0 100% 0 0);animation:type3 12s steps(34) infinite}
+@keyframes type1{0%{clip-path:inset(0 100% 0 0)}12%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes type2{0%,14%{clip-path:inset(0 100% 0 0)}28%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+@keyframes type3{0%,30%{clip-path:inset(0 100% 0 0)}50%,88%{clip-path:inset(0 0 0 0)}92%,100%{clip-path:inset(0 100% 0 0)}}
+.cur{animation:blink 1s steps(1) infinite}
+@keyframes blink{0%,49%{opacity:1}50%,100%{opacity:0}}
+]]></style>
+<text class="t l1" x="235" text-anchor="middle" y="34" font-size="22">RALIQ HIDAYAT</text>
+<text class="t l2" x="235" text-anchor="middle" y="66" font-size="17">FULLSTACK TRAVELER</text>
+<text class="t l3" x="235" text-anchor="middle" y="96" font-size="12.5">TEYVAT IS WIDE. SO IS THE STACK.</text>
+<text class="cur" x="235" y="118" text-anchor="middle" font-family="ui-monospace,monospace" font-size="12" fill="#7fd8cf">▮</text>
+</svg>

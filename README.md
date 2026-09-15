@@ -16,7 +16,7 @@
 
 <br><br>
 
-<img src="https://readme-typing-svg.demolab.com?font=Cinzel&size=24&pause=1400&color=E8C877&center=true&vCenter=true&multiline=true&width=470&height=110&lines=RALIQ+HIDAYAT;FULLSTACK+TRAVELER;TEYVAT+IS+WIDE.+SO+IS+THE+STACK." alt="Typing intro: Raliq Hidayat — fullstack traveler — Teyvat is wide. So is the stack.">
+<img src="./assets/intro-typing.svg" width="470" alt="Typing intro, three gold lines: Raliq Hidayat — fullstack traveler — Teyvat is wide. So is the stack.">
 
 <br>
 
@@ -31,7 +31,7 @@
 
 <br><br>
 
-<img src="https://img.shields.io/badge/PARTNER-PAIMON-E8C877?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZD0iTTEyIDJsMiA4IDggMi04IDItMiA4LTItOC04LTIgOC0yeiIgZmlsbD0id2hpdGUiLz48L3N2Zz4=&logoColor=101828" alt="partner: Paimon">
+<img src="https://img.shields.io/badge/PARTNER-PAIMON-E8C877?style=for-the-badge&labelColor=1a2238&color=E8C877" alt="partner: Paimon">
 
 <br><br>
 
@@ -204,26 +204,22 @@ CURRENT STATUS
 
 <br><br>
 
+<img src="./assets/talents.svg" width="1012" alt="Talent Court panel: Laravel Lv.92, React Lv.90, PHP Lv.90, TypeScript Lv.87, Next.js Lv.86, MySQL Lv.86, Node.js Lv.85, Python Lv.80, Lua Roblox Lv.78, Blender WebGL Lv.75 — each with a colored level bar">
+
+<br><br>
+
 <table width="100%">
 <tr>
-<td width="55%" valign="top">
-
-**ASCENDED TALENTS**
-
-<img src="https://img.shields.io/badge/LARAVEL-LV.92-FF9A3C?style=for-the-badge&logo=laravel&logoColor=white" alt="Laravel Lv.92"> <img src="https://img.shields.io/badge/PHP-LV.90-F7C644?style=for-the-badge&logo=php&logoColor=101828" alt="PHP Lv.90"> <img src="https://img.shields.io/badge/REACT-LV.90-23D3C3?style=for-the-badge&logo=react&logoColor=101828" alt="React Lv.90"> <img src="https://img.shields.io/badge/TYPESCRIPT-LV.87-4CC2F2?style=for-the-badge&logo=typescript&logoColor=101828" alt="TypeScript Lv.87">
-
-<br>
-
-<img src="https://img.shields.io/badge/NEXT.JS-LV.86-9EE7FF?style=for-the-badge&logo=nextdotjs&logoColor=101828" alt="Next.js Lv.86"> <img src="https://img.shields.io/badge/MYSQL-LV.86-E8C877?style=for-the-badge&logo=mysql&logoColor=101828" alt="MySQL Lv.86"> <img src="https://img.shields.io/badge/NODE.JS-LV.85-B58EE8?style=for-the-badge&logo=nodedotjs&logoColor=101828" alt="Node.js Lv.85"> <img src="https://img.shields.io/badge/BLENDER-LV.78-98E6AF?style=for-the-badge&logo=blender&logoColor=101828" alt="Blender Lv.78">
-
-</td>
-<td width="45%" valign="top" align="center">
+<td width="50%" valign="middle" align="center">
 
 <img src="./assets/img/playerboy.png" width="96" alt="the Traveler (Aether)">
 
+</td>
+<td width="50%" valign="middle">
+
 *This stack is the **Traveler** — it resonates with whichever*
-*Archon the contract demands: Laravel today,*
-*Next.js tomorrow, Blender in the domain between.*
+*Archon the contract demands: Laravel today, Next.js tomorrow,*
+*Blender in the domain between.*
 
 </td>
 </tr>
@@ -232,10 +228,6 @@ CURRENT STATUS
 <img src="./assets/divider.svg" width="1012" alt="">
 
 <img src="./assets/plate-achievements.svg" width="1012" alt="Section header, Chapter V: Adventure Progress">
-
-<img src="https://readme-activity-graph.vercel.app/graph?username=kouji999&bg_color=0e1424&color=E8C877&title_color=E8C877&line=23D3C3&point=FF9A3C&area=true&hide_border=true&custom_title=STARDUST+COLLECTED+LAST+31+DAYS" width="1012" alt="activity graph: stardust collected last 31 days">
-
-<br><br>
 
 <table width="100%">
 <tr>
