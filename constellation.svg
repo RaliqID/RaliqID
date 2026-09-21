@@ -3,7 +3,7 @@
 @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
 <rect x="1" y="1" width="1010" height="374" rx="4" fill="url(#ab2)" stroke="#e8c877" stroke-opacity=".45"/>
 <defs><linearGradient id="ab2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#131b2e"/><stop offset="1" stop-color="#0e1424"/></linearGradient></defs>
-<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 11 WORLDS CHARTED · UPDATED 2026-09-20</text>
+<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 11 WORLDS CHARTED · UPDATED 2026-09-21</text>
 <rect x="32" y="50" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="70" r="4" fill="#23d3c3"/>
 <text class="g" x="60" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">signal-lost</text>
