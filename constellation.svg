@@ -1,83 +1,69 @@
-<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="452" viewBox="0 0 1012 452"><title>Repository constellation</title><desc>Every public repository as a charted plaque — name, language, stars and description. Regenerated daily, new repositories appear automatically.</desc>
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="388" viewBox="0 0 1012 388"><title>Repository constellation</title><desc>Public repositories as charted plaques: name, language, stars and description. The 12 most recently pushed are shown; the remainder stay folded until opened.</desc>
 <style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
 @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
-<rect x="1" y="1" width="1010" height="450" rx="4" fill="url(#ab2)" stroke="#e8c877" stroke-opacity=".45"/>
+<rect x="1" y="1" width="1010" height="386" rx="4" fill="url(#ab2)" stroke="#e8c877" stroke-opacity=".45"/>
 <defs><linearGradient id="ab2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#131b2e"/><stop offset="1" stop-color="#0e1424"/></linearGradient></defs>
-<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 15 WORLDS CHARTED · UPDATED 2026-09-23</text>
-<rect x="32" y="50" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 25 WORLDS · 12 MOST RECENT</text>
+<rect x="32" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="70" r="4" fill="#23d3c3"/>
 <text class="g" x="60" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">striv</text>
-<text class="m" x="318" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="48" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">Striv - AI-powered fitness tracking platform: wor…</text>
-<rect x="346" y="50" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="362" cy="70" r="4" fill="#ff9a3c"/>
-<text class="g" x="374" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">unity-demo</text>
-<text class="m" x="632" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">Other · ★0</text>
-<text class="m" x="362" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="660" y="50" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="676" cy="70" r="4" fill="#4cc2f2"/>
-<text class="g" x="688" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">rolling-ball</text>
-<text class="m" x="946" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">C# · ★0</text>
-<text class="m" x="676" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="32" y="126" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<text class="m" x="326" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="48" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">Striv - AI-powered fitness tracking platform: …</text>
+<rect x="352" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="368" cy="70" r="4" fill="#ff9a3c"/>
+<text class="g" x="380" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">unity-demo</text>
+<text class="m" x="646" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">Other · ★0</text>
+<text class="m" x="368" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="672" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="688" cy="70" r="4" fill="#4cc2f2"/>
+<text class="g" x="700" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">rolling-ball</text>
+<text class="m" x="966" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">C# · ★0</text>
+<text class="m" x="688" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="32" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="146" r="4" fill="#b58ee8"/>
 <text class="g" x="60" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">reelready</text>
-<text class="m" x="318" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">JavaScript · ★0</text>
+<text class="m" x="326" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">JavaScript · ★0</text>
 <text class="m" x="48" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="346" y="126" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="362" cy="146" r="4" fill="#f7c644"/>
-<text class="g" x="374" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">pempek-kelompok-6</text>
-<text class="m" x="632" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">CSS · ★0</text>
-<text class="m" x="362" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="660" y="126" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="676" cy="146" r="4" fill="#9ee7ff"/>
-<text class="g" x="688" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">food-website</text>
-<text class="m" x="946" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">HTML · ★0</text>
-<text class="m" x="676" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="32" y="202" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<rect x="352" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="368" cy="146" r="4" fill="#f7c644"/>
+<text class="g" x="380" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">pempek-kelompok-6</text>
+<text class="m" x="646" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">CSS · ★0</text>
+<text class="m" x="368" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="672" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="688" cy="146" r="4" fill="#9ee7ff"/>
+<text class="g" x="700" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">food-website</text>
+<text class="m" x="966" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">HTML · ★0</text>
+<text class="m" x="688" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="32" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="222" r="4" fill="#98e6af"/>
 <text class="g" x="60" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">GamesTest</text>
-<text class="m" x="318" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">ASP.NET · ★0</text>
+<text class="m" x="326" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">ASP.NET · ★0</text>
 <text class="m" x="48" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="346" y="202" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="362" cy="222" r="4" fill="#23d3c3"/>
-<text class="g" x="374" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">ReelUp</text>
-<text class="m" x="632" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="362" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="660" y="202" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="676" cy="222" r="4" fill="#ff9a3c"/>
-<text class="g" x="688" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">cheat-clip-pro-2</text>
-<text class="m" x="946" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="676" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="32" y="278" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<rect x="352" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="368" cy="222" r="4" fill="#23d3c3"/>
+<text class="g" x="380" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">ReelUp</text>
+<text class="m" x="646" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="368" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="672" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="688" cy="222" r="4" fill="#ff9a3c"/>
+<text class="g" x="700" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">cheat-clip-pro-2</text>
+<text class="m" x="966" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="688" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="32" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="298" r="4" fill="#4cc2f2"/>
 <text class="g" x="60" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">KAGE</text>
-<text class="m" x="318" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="326" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
 <text class="m" x="48" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="346" y="278" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="362" cy="298" r="4" fill="#b58ee8"/>
-<text class="g" x="374" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">oracle-bot</text>
-<text class="m" x="632" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="362" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="660" y="278" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="676" cy="298" r="4" fill="#f7c644"/>
-<text class="g" x="688" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">aether-landing</text>
-<text class="m" x="946" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="676" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="32" y="354" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="48" cy="374" r="4" fill="#9ee7ff"/>
-<text class="g" x="60" y="379" font-size="13.5" font-weight="bold" fill="#e8c877">reelshq</text>
-<text class="m" x="318" y="379" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="48" y="399" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<rect x="346" y="354" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="362" cy="374" r="4" fill="#98e6af"/>
-<text class="g" x="374" y="379" font-size="13.5" font-weight="bold" fill="#e8c877">techcore-landing</text>
-<text class="m" x="632" y="379" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="362" y="399" font-size="9.5" fill="#efe6d0" opacity=".8">TechCore — 3D dark tech landing page with interac…</text>
-<rect x="660" y="354" width="300" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
-<circle cx="676" cy="374" r="4" fill="#23d3c3"/>
-<text class="g" x="688" y="379" font-size="13.5" font-weight="bold" fill="#e8c877">hookline</text>
-<text class="m" x="946" y="379" text-anchor="end" font-size="9.5" fill="#6d7a99">Python · ★0</text>
-<text class="m" x="676" y="399" font-size="9.5" fill="#efe6d0" opacity=".8">Rewatch — AI attention-signal console for YouTube…</text>
-<text class="m tw" x="980" y="440" text-anchor="end" font-size="9" fill="#7fd8cf" opacity=".7">✦ auto-generated daily from the live repository list ✦</text>
+<rect x="352" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="368" cy="298" r="4" fill="#b58ee8"/>
+<text class="g" x="380" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">oracle-bot</text>
+<text class="m" x="646" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="368" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<rect x="672" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
+<circle cx="688" cy="298" r="4" fill="#f7c644"/>
+<text class="g" x="700" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">aether-landing</text>
+<text class="m" x="966" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="688" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="m" x="32" y="374" font-size="10.5" fill="#e8c877" opacity=".85">▾ 13 more worlds charted — open the folded list below</text>
+<text class="m tw" x="980" y="374" text-anchor="end" font-size="9" fill="#7fd8cf" opacity=".7">↻ refreshed 2026-09-23 08:41 UTC</text>
 </svg>
