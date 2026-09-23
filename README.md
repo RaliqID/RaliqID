@@ -229,15 +229,23 @@ CURRENT STATUS
 
 <img src="./assets/plate-achievements.svg" width="1012" alt="Section header, Chapter V: Adventure Progress">
 
-<!-- All panels below are rendered nightly by .github/workflows/profile-update.yml
-     using the repo's own GitHub token — no third-party service can "fail to
-     retrieve" your data at view time. New repos appear in the constellation
-     automatically; numbers refresh every day. -->
+<!-- Rendered by .github/workflows/profile-update.yml with the repo's own token,
+     so no third-party service can fail to retrieve your data. Runs every 3
+     hours, on every push, and on demand — new repos and new commits show up
+     without anyone editing this file. -->
 <img src="https://raw.githubusercontent.com/kouji999/kouji999/output/adventure.svg?raw=1" width="1012" alt="Adventure progress: total stardust last 365 days, current and best streak, commits, pull requests, reviews, issues, stars earned, repos charted, top languages and a 52-week contribution heatmap in Teyvat colors">
 
 <br>
 
-<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/constellation.svg?raw=1" width="1012" alt="Repository constellation: every public repository as a plaque with name, primary language, stars and a one-line description, re-charted nightly">
+<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/constellation.svg?raw=1" width="1012" alt="Repository constellation: the 12 most recently pushed public repositories as plaques with name, language, stars and description">
+
+<details>
+<summary><b>▾ Open the remaining charted worlds</b></summary>
+<br>
+
+https://raw.githubusercontent.com/kouji999/kouji999/output/constellation-more.md
+
+</details>
 
 <br>
 
