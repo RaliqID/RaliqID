@@ -2,9 +2,15 @@ name: profile update
 
 on:
   schedule:
-    - cron: '15 3 * * *' # 10:15 UTC+7, after the heartbeat push
+    # Every 3 hours so the panels never sit stale for a full day. GitHub's
+    # scheduler is best-effort; the push trigger below is the real-time path.
+    - cron: '15 */3 * * *'
   push:
     branches: [main]
+  # Lets the heartbeat repo (or any external caller) poke this on demand:
+  #   gh api repos/kouji999/kouji999/dispatches -f event_type=refresh
+  repository_dispatch:
+    types: [refresh]
   workflow_dispatch: {}
 
 permissions:
@@ -30,15 +36,16 @@ jobs:
             const from = new Date(Date.now() - 365 * 864e5).toISOString();
             const q = `query($login:String!,$from:DateTime!){ user(login:$login){
               contributionsCollection(from:$from){ totalCommitContributions totalPullRequestContributions totalPullRequestReviewContributions totalIssueContributions totalRepositoryContributions contributionCalendar{ totalContributions weeks{ contributionDays{ date contributionCount }}}}
-              repositories(first:50, privacy:PUBLIC, orderBy:{field:PUSHED_AT,direction:DESC}){ nodes{ name description isFork primaryLanguage{ name } stargazerCount } }
+              repositories(first:100, privacy:PUBLIC, ownerAffiliations:OWNER, orderBy:{field:PUSHED_AT,direction:DESC}){ totalCount nodes{ name description isFork pushedAt primaryLanguage{ name } stargazerCount } }
             }}`;
             const data = await github.graphql(q, { login, from });
             const cc = data.user.contributionsCollection;
             const days = cc.contributionCalendar.weeks.flatMap(w => w.contributionDays);
+            // Every public repo, no cap. Repos you own are what the profile
+            // should show; there is no reason to truncate this list.
             const repos = data.user.repositories.nodes
               .filter(r => r.name !== login)
-              .slice(0, 15)
-              .map(r => ({ name: r.name, desc: r.description || (r.isFork ? 'fork — kept in orbit' : 'undocumented world'), lang: r.primaryLanguage ? r.primaryLanguage.name : 'Other', stars: r.stargazerCount }));
+              .map(r => ({ name: r.name, desc: r.description || (r.isFork ? 'fork — kept in orbit' : 'undocumented world'), lang: r.primaryLanguage ? r.primaryLanguage.name : 'Other', stars: r.stargazerCount, pushedAt: r.pushedAt }));
             const stats = {
               total: cc.contributionCalendar.totalContributions,
               commits: cc.totalCommitContributions,
@@ -73,7 +80,7 @@ jobs:
             console.log('stats ok:', s.days.length, 'days,', s.repos.length, 'repos,', s.total, 'contributions');
           "
           node scripts/render-stats.mjs
-          for f in dist/adventure.svg dist/constellation.svg; do
+          for f in dist/adventure.svg dist/constellation.svg dist/constellation-more.md; do
             [ -s "$f" ] || { echo "::error::$f was not rendered"; exit 1; }
           done
 

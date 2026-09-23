@@ -8,9 +8,28 @@ const elColors = ['#23d3c3', '#ff9a3c', '#4cc2f2', '#b58ee8', '#f7c644', '#9ee7f
 
 const esc = s => String(s).replace(/&/g, '&amp;').replace(/</g, '&lt;').replace(/>/g, '&gt;').replace(/"/g, '&quot;');
 
-const stats = JSON.parse(readFileSync('stats.json', 'utf8'));
+// GitHub's API returns proper UTF-8, but PowerShell's pipeline decodes it as
+// Latin-1 (and sometimes twice), handing us multi-char garbage where a single
+// em-dash belongs. Repair the byte sequences, not just one spelling of them.
+const fixEnc = s => String(s)
+  // em-dash — mangled as latin1 / cp1252 / double-decoded
+  .replace(/\u00E2\u20AC\u201D|\u00E2\u0080\u0094|\u0393\u00C7\u00F6/g, '\u2014')
+  // right single quote ’
+  .replace(/\u00E2\u20AC\u2122|\u00E2\u0080\u0099|\u0393\u00C7\u00F4/g, '\u2019')
+  // left/right double quotes “ ”
+  .replace(/\u00E2\u20AC\u0153|\u00E2\u0080\u009C/g, '\u201C')
+  .replace(/\u00E2\u20AC\u009D|\u00E2\u0080\u009D/g, '\u201D')
+  // en-dash –
+  .replace(/\u00E2\u20AC\u201C|\u00E2\u0080\u0093/g, '\u2013')
+  // replacement char + stray cp1252 artifacts from a lossy round-trip
+  .replace(/[\uFFFD\u0081\u008D\u008F\u0090\u009D]/g, '');
+const clean = s => fixEnc(esc(s));
+
+const stats = JSON.parse(readFileSync('stats.json', 'utf8').replace(/^[\uFEFF\u200B\s]+/, ''));
 mkdirSync('dist', { recursive: true });
-const updated = new Date().toISOString().slice(0, 10);
+const now = new Date();
+const updated = now.toISOString().slice(0, 10);
+const stamp = now.toISOString().slice(0, 16).replace('T', ' ') + ' UTC';
 
 // ---------- streaks ----------
 const days = stats.days.map(d => d.count ?? d.contributionCount ?? 0);
@@ -36,7 +55,7 @@ const topLangs = Object.entries(langCount).sort((a, b) => b[1] - a[1]).slice(0, 
 const langsSvg = topLangs.map((t, n) => {
   const y = 128 + n * 15;
   const w = Math.max(Math.round(t[1] / stats.repos.length * 170), 8);
-  return `<text x="40" y="${y}" font-family="ui-monospace,Consolas,monospace" font-size="9.5" fill="${DIM}">${esc(t[0])}</text>
+  return `<text x="40" y="${y}" font-family="ui-monospace,Consolas,monospace" font-size="9.5" fill="${DIM}">${clean(t[0])}</text>
 <rect x="132" y="${y - 8}" width="${w}" height="8" rx="2" fill="${elColors[n % elColors.length]}" opacity=".85"/>
 <text x="${138 + w}" y="${y}" font-family="ui-monospace,Consolas,monospace" font-size="9.5" fill="${GOLD_DIM}">${t[1]}</text>`;
 }).join('\n');
@@ -65,29 +84,57 @@ ${langsSvg}
 </svg>`);
 
 // ---------- constellation.svg ----------
-const per = 3, cw = 300, ch = 64, gx = 14, gy = 12, x0 = 32, y0 = 50;
-const repos = stats.repos.slice(0, 15);
-const chips = repos.map((r, idx) => {
+// Show the newest HEAD repos as plaques and fold the rest into a markdown list
+// rendered in the README's <details>. GitHub's own "load more" pattern: the
+// visible grid never gets crushed, and 60 repos cost the same as 12.
+const all = stats.repos;
+const HEAD = 12;
+const head = all.slice(0, HEAD);
+const tail = all.slice(HEAD);
+const per = 3;
+const cw = Math.floor((1012 - 64 - (per - 1) * 14) / per);
+const ch = 64, gx = 14, gy = 12, x0 = 32, y0 = 50;
+
+const chip = (r, idx) => {
   const x = x0 + (idx % per) * (cw + gx);
   const y = y0 + Math.floor(idx / per) * (ch + gy);
   const dot = elColors[idx % elColors.length];
-  const desc = r.desc.length > 50 ? r.desc.slice(0, 49) + '…' : r.desc;
+  // Measure the meta label instead of guessing, so a long repo name can never
+  // run into it. Georgia bold 13.5px ≈ 8.6px/char; 9.5px mono ≈ 5.8px/char.
+  const meta = `${r.lang} · ★${r.stars}`;
+  const metaPx = (meta.length + 1) * 5.8 + 16;
+  const nameMax = Math.max(Math.floor((cw - 28 - metaPx) / 8.6), 5);
+  const name = r.name.length > nameMax ? r.name.slice(0, nameMax - 1) + '…' : r.name;
+  const descMax = Math.max(Math.floor((cw - 34) / 5.7), 8);
+  const desc = r.desc.length > descMax ? r.desc.slice(0, descMax - 1) + '…' : r.desc;
   return `<rect x="${x}" y="${y}" width="${cw}" height="${ch}" rx="6" fill="#0a1226" stroke="${GOLD}" stroke-opacity=".26"/>
 <circle cx="${x + 16}" cy="${y + 20}" r="4" fill="${dot}"/>
-<text class="g" x="${x + 28}" y="${y + 25}" font-size="13.5" font-weight="bold" fill="${GOLD}">${esc(r.name)}</text>
-<text class="m" x="${x + cw - 14}" y="${y + 25}" text-anchor="end" font-size="9.5" fill="${DIM}">${esc(r.lang)} · ★${r.stars}</text>
-<text class="m" x="${x + 16}" y="${y + 45}" font-size="9.5" fill="${PARCH}" opacity=".8">${esc(desc)}</text>`;
-});
-const rows = Math.max(1, Math.ceil(repos.length / per));
-const H = y0 + rows * (ch + gy) + 22;
-writeFileSync('dist/constellation.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="${H}" viewBox="0 0 1012 ${H}"><title>Repository constellation</title><desc>Every public repository as a charted plaque — name, language, stars and description. Regenerated daily, new repositories appear automatically.</desc>
+<text class="g" x="${x + 28}" y="${y + 25}" font-size="13.5" font-weight="bold" fill="${GOLD}">${clean(name)}</text>
+<text class="m" x="${x + cw - 12}" y="${y + 25}" text-anchor="end" font-size="9.5" fill="${DIM}">${clean(meta)}</text>
+<text class="m" x="${x + 16}" y="${y + 45}" font-size="9.5" fill="${PARCH}" opacity=".8">${clean(desc)}</text>`;
+};
+
+const headRows = Math.max(1, Math.ceil(head.length / per));
+const H = y0 + headRows * (ch + gy) + (tail.length ? 34 : 22);
+writeFileSync('dist/constellation.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="${H}" viewBox="0 0 1012 ${H}"><title>Repository constellation</title><desc>Public repositories as charted plaques: name, language, stars and description. The ${HEAD} most recently pushed are shown; the remainder stay folded until opened.</desc>
 <style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
 @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
 <rect x="1" y="1" width="1010" height="${H - 2}" rx="4" fill="url(#ab2)" stroke="${GOLD}" stroke-opacity=".45"/>
 <defs><linearGradient id="ab2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${NAVY2}"/><stop offset="1" stop-color="${NAVY}"/></linearGradient></defs>
-<text class="m" x="32" y="32" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">REPOSITORY CONSTELLATION — ${repos.length} WORLDS CHARTED · UPDATED ${updated}</text>
-${chips.join('\n')}
-<text class="m tw" x="980" y="${H - 12}" text-anchor="end" font-size="9" fill="${TEAL}" opacity=".7">✦ auto-generated daily from the live repository list ✦</text>
+<text class="m" x="32" y="32" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">REPOSITORY CONSTELLATION — ${all.length} WORLDS · ${head.length} MOST RECENT</text>
+${head.map(chip).join('\n')}
+<text class="m" x="32" y="${H - 14}" font-size="10.5" fill="${GOLD}" opacity=".85">${tail.length ? `▾ ${tail.length} more worlds charted — open the folded list below` : '▾ every world charted'}</text>
+<text class="m tw" x="980" y="${H - 14}" text-anchor="end" font-size="9" fill="${TEAL}" opacity=".7">↻ refreshed ${stamp}</text>
 </svg>`);
 
-console.log('rendered dist/adventure.svg + dist/constellation.svg');
+// ---------- constellation-more.md ----------
+// Folded tail as markdown: wraps naturally, reads like GitHub, zero maintenance.
+if (tail.length) {
+  const lines = tail.map((r, n) =>
+    `${n + 1}. **${r.name}**${r.stars ? ` · ★${r.stars}` : ''} — \`${r.lang}\`<br><sub>${r.desc}</sub>`);
+  // Run the whole document through the encoder repair, not just descriptions:
+  // PowerShell mangles every literal that passes through its pipeline.
+  writeFileSync('dist/constellation-more.md', fixEnc(lines.join('\n\n')) + '\n');
+}
+
+console.log(`rendered adventure.svg + constellation.svg (${head.length} shown, ${tail.length} folded)`);
