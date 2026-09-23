@@ -10,6 +10,11 @@ on:
 permissions:
   contents: write
 
+# Never let two renders race each other onto the output branch.
+concurrency:
+  group: profile-update
+  cancel-in-progress: false
+
 jobs:
   update:
     runs-on: ubuntu-latest
@@ -52,7 +57,25 @@ jobs:
           node-version: 20
 
       - name: render adventure + constellation
-        run: node scripts/render-stats.mjs
+        run: |
+          set -e
+          # Fail loudly with context instead of a bare stack trace, so a future
+          # breakage is diagnosable from the run log alone.
+          if [ ! -f stats.json ]; then
+            echo "::error::stats.json missing — the GraphQL step did not run"
+            exit 1
+          fi
+          node -e "
+            const s = require('./stats.json');
+            const need = ['days','repos','total'];
+            for (const k of need) if (s[k] === undefined) { console.error('missing stats key:', k); process.exit(1); }
+            if (!s.days.length) { console.error('stats.days is empty'); process.exit(1); }
+            console.log('stats ok:', s.days.length, 'days,', s.repos.length, 'repos,', s.total, 'contributions');
+          "
+          node scripts/render-stats.mjs
+          for f in dist/adventure.svg dist/constellation.svg; do
+            [ -s "$f" ] || { echo "::error::$f was not rendered"; exit 1; }
+          done
 
       - name: render contribution snake
         uses: Platane/snk/svg-only@v3
