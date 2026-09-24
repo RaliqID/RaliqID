@@ -137,4 +137,64 @@ if (tail.length) {
   writeFileSync('dist/constellation-more.md', fixEnc(lines.join('\n\n')) + '\n');
 }
 
-console.log(`rendered adventure.svg + constellation.svg (${head.length} shown, ${tail.length} folded)`);
+// ---------- trophy-case.svg ----------
+// Self-rendered trophies instead of github-profile-trophy.vercel.app, which
+// returns HTTP 402 when its shared quota runs out and leaves an empty box on
+// the profile. Tiers are derived from real stats, so a trophy appears only when
+// the data actually earns it — no fake hardware.
+{
+  const defs = [
+    { key: 'commits', label: 'COMMITS', value: stats.commits, unit: '', tiers: [50, 150, 500, 2000], color: '#ff9a3c' },
+    { key: 'stardust', label: 'STARDUST', value: stats.total, unit: '', tiers: [200, 500, 1000, 2500], color: '#e8c877' },
+    { key: 'repos', label: 'WORLDS', value: stats.repos.length, tiers: [5, 15, 30, 60], color: '#4cc2f2' },
+    { key: 'streak', label: 'STREAK', value: longest, unit: 'd', tiers: [7, 30, 100, 365], color: '#ff6b4a' },
+    { key: 'active', label: 'ACTIVE DAYS', value: days.filter(c => c > 0).length, tiers: [30, 100, 200, 300], color: '#23d3c3' },
+    { key: 'reviews', label: 'REVIEWS', value: stats.reviews, tiers: [1, 10, 50, 200], color: '#b58ee8' },
+    { key: 'prs', label: 'PULL REQUESTS', value: stats.prs, tiers: [1, 10, 50, 200], color: '#9ee7ff' },
+    { key: 'issues', label: 'ISSUES', value: stats.issues, tiers: [1, 10, 50, 200], color: '#98e6af' },
+  ];
+  const roman = ['', 'I', 'II', 'III', 'IV'];
+  const tierOf = (v, tiers) => { let t = 0; for (let k = 0; k < tiers.length; k++) if (v >= tiers[k]) t = k + 1; return t; };
+
+  const cols = 4, tw = 238, th = 96, tgx = 14, tgy = 14, tx0 = 26, ty0 = 54;
+  const rowsN = Math.ceil(defs.length / cols);
+  const TH_ = ty0 + rowsN * (th + tgy) + 26;
+
+  const trophy = (d, idx) => {
+    const t = tierOf(d.value, d.tiers);
+    const x = tx0 + (idx % cols) * (tw + tgx);
+    const y = ty0 + Math.floor(idx / cols) * (th + tgy);
+    const lit = t > 0;
+    // Next threshold gives the viewer something to chase.
+    const next = d.tiers.find(v => d.value < v);
+    const progress = lit ? (next ? `next at ${next}` : 'maxed') : `needs ${d.tiers[0]}`;
+    const dim = lit ? 1 : 0.32;
+    const glow = lit ? `<circle class="tglow" cx="${x + 44}" cy="${y + 46}" r="34" fill="${d.color}" opacity=".1"/>` : '';
+    // simple trophy glyph, scales with tier
+    const cup = `<path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="${d.color}" opacity="${dim * 0.85}"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="${d.color}" stroke-opacity="${dim * 0.7}" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="${d.color}" opacity="${dim * 0.7}"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="${d.color}" opacity="${dim * 0.8}"/>`;
+    return `<rect x="${x}" y="${y}" width="${tw}" height="${th}" rx="6" fill="#0a1226" stroke="${lit ? d.color : GOLD_DIM}" stroke-opacity="${lit ? 0.5 : 0.25}"/>
+${glow}
+<g transform="translate(${x + 4} ${y + 12})">${cup}</g>
+<text class="g" x="${x + 84}" y="${y + 40}" font-size="21" font-weight="bold" fill="${lit ? d.color : DIM}" opacity="${lit ? 1 : 0.6}">${d.value}${d.unit}</text>
+<text class="m" x="${x + 84}" y="${y + 58}" font-size="9.5" fill="${lit ? GOLD : DIM}" opacity="${lit ? 1 : 0.6}" letter-spacing="1">${d.label}</text>
+<text class="m" x="${x + 84}" y="${y + 74}" font-size="9" fill="${GOLD_DIM}">${lit ? roman[t] + ' — ' + sub.split('·').slice(1).join('·').trim() : sub}</text>`;
+  };
+
+  const earned = defs.filter(d => tierOf(d.value, d.tiers) > 0).length;
+  writeFileSync('dist/trophy-case.svg', `<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="${TH_}" viewBox="0 0 1012 ${TH_}"><title>Trophy case</title><desc>Eight trophies tiered from real account data: commits, total contributions, repositories, longest streak, active days, reviews, pull requests and issues. Locked trophies show what is still needed. Rendered by this repository, so it cannot fail to load.</desc>
+<style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}
+@keyframes tglow{0%,100%{opacity:.08}50%{opacity:.24}}.tglow{animation:tglow 4s ease-in-out infinite}]]></style>
+<defs><linearGradient id="tc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="${NAVY2}"/><stop offset="1" stop-color="${NAVY}"/></linearGradient></defs>
+<rect x="1" y="1" width="1010" height="${TH_ - 2}" rx="4" fill="url(#tc)" stroke="${GOLD}" stroke-opacity=".45"/>
+<rect x="7" y="7" width="998" height="${TH_ - 14}" rx="2" fill="none" stroke="${GOLD}" stroke-opacity=".18"/>
+<text class="m" x="26" y="36" font-size="10.5" fill="${GOLD_DIM}" letter-spacing="2">TROPHY CASE — ${earned}/${defs.length} EARNED · TIERS I–IV</text>
+${defs.map(trophy).join('\n')}
+<text class="m tw" x="986" y="${TH_ - 12}" text-anchor="end" font-size="9" fill="${TEAL}" opacity=".7">↻ refreshed ${stamp}</text>
+</svg>`);
+}
+
+console.log(`rendered adventure.svg + constellation.svg (${head.length} shown, ${tail.length} folded) + trophy-case.svg`);

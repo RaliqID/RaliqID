@@ -8,7 +8,7 @@ on:
   push:
     branches: [main]
   # Lets the heartbeat repo (or any external caller) poke this on demand:
-  #   gh api repos/kouji999/kouji999/dispatches -f event_type=refresh
+  #   gh api repos/RaliqID/RaliqID/dispatches -f event_type=refresh
   repository_dispatch:
     types: [refresh]
   workflow_dispatch: {}
@@ -32,7 +32,7 @@ jobs:
         with:
           script: |
             const fs = require('fs');
-            const login = 'kouji999';
+            const login = 'RaliqID';
             const from = new Date(Date.now() - 365 * 864e5).toISOString();
             const q = `query($login:String!,$from:DateTime!){ user(login:$login){
               contributionsCollection(from:$from){ totalCommitContributions totalPullRequestContributions totalPullRequestReviewContributions totalIssueContributions totalRepositoryContributions contributionCalendar{ totalContributions weeks{ contributionDays{ date contributionCount }}}}
@@ -87,7 +87,7 @@ jobs:
       - name: render contribution snake
         uses: Platane/snk/svg-only@v3
         with:
-          github_user_name: kouji999
+          github_user_name: RaliqID
           outputs: |
             dist/github-contribution-grid-snake.svg?color_background=0e1424&color_snake=23D3C3
             dist/github-contribution-grid-snake-dark.svg?palette=github-dark&color_background=0d1117&color_snake=E8C877
