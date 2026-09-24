@@ -27,7 +27,7 @@
 </td>
 <td width="38%" valign="middle" align="center">
 
-<img src="https://komarev.com/ghpvc/?username=kouji999&style=for-the-badge&color=1c2b45&label=WANDERERS+SPOTTED" alt="visitor counter">
+<img src="https://komarev.com/ghpvc/?username=RaliqID&style=for-the-badge&color=1c2b45&label=WANDERERS+SPOTTED" alt="visitor counter">
 
 <br><br>
 
@@ -86,7 +86,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 <tr>
 <td width="25%" valign="top" align="center">
 
-<a href="https://github.com/kouji999/forge"><img src="./assets/img/zhongli.png" width="80" alt="Zhongli"></a>
+<a href="https://github.com/RaliqID/forge"><img src="./assets/img/zhongli.png" width="80" alt="Zhongli"></a>
 
 **FORGE** · Geo
 <sub>Idea → PRD → spec. Contracts, not vibes.</sub>
@@ -95,7 +95,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td width="25%" valign="top" align="center">
 
-<a href="https://github.com/kouji999/wa-commerce-os"><img src="./assets/img/navia.png" width="80" alt="Navia"></a>
+<a href="https://github.com/RaliqID/wa-commerce-os"><img src="./assets/img/navia.png" width="80" alt="Navia"></a>
 
 **WA COMMERCE OS** · Hydro
 <sub>Sales deals flowing like Fontaine water.</sub>
@@ -104,7 +104,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td width="25%" valign="top" align="center">
 
-<a href="https://github.com/kouji999/SmartStudy-AI"><img src="./assets/img/nahida.png" width="80" alt="Nahida"></a>
+<a href="https://github.com/RaliqID/SmartStudy-AI"><img src="./assets/img/nahida.png" width="80" alt="Nahida"></a>
 
 **SMARTSTUDY AI** · Dendro
 <sub>Wisdom on tap. The tutor never sleeps.</sub>
@@ -113,7 +113,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td width="25%" valign="top" align="center">
 
-<a href="https://github.com/kouji999/striv"><img src="./assets/img/kachina.png" width="80" alt="Kachina"></a>
+<a href="https://github.com/RaliqID/striv"><img src="./assets/img/kachina.png" width="80" alt="Kachina"></a>
 
 **STRIV** · Electro
 <sub>Sprints, PRs, personal bests.</sub>
@@ -124,7 +124,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 <tr>
 <td valign="top" align="center">
 
-<a href="https://github.com/kouji999/PRDForge"><img src="./assets/img/xiangling.png" width="80" alt="Xiangling"></a>
+<a href="https://github.com/RaliqID/PRDForge"><img src="./assets/img/xiangling.png" width="80" alt="Xiangling"></a>
 
 **PRDFORGE** · Pyro
 <sub>Cooking raw requirements into 5★ PRDs.</sub>
@@ -133,7 +133,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td valign="top" align="center">
 
-<a href="https://github.com/kouji999/noir-studio"><img src="./assets/img/yelan.png" width="80" alt="Yelan"></a>
+<a href="https://github.com/RaliqID/noir-studio"><img src="./assets/img/yelan.png" width="80" alt="Yelan"></a>
 
 **NOIR · TECHCORE** · Hydro
 <sub>Night ops: dark landings, never seen shipping.</sub>
@@ -142,7 +142,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td valign="top" align="center">
 
-<a href="https://github.com/kouji999/learnlaravel"><img src="./assets/img/aloy.png" width="80" alt="Aloy"></a>
+<a href="https://github.com/RaliqID/learnlaravel"><img src="./assets/img/aloy.png" width="80" alt="Aloy"></a>
 
 **LEARNLARAVEL** · Cryo
 <sub>The foundation. Basics, mastered.</sub>
@@ -233,23 +233,27 @@ CURRENT STATUS
      so no third-party service can fail to retrieve your data. Runs every 3
      hours, on every push, and on demand — new repos and new commits show up
      without anyone editing this file. -->
-<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/adventure.svg?raw=1" width="1012" alt="Adventure progress: total stardust last 365 days, current and best streak, commits, pull requests, reviews, issues, stars earned, repos charted, top languages and a 52-week contribution heatmap in Teyvat colors">
+<img src="https://raw.githubusercontent.com/RaliqID/RaliqID/output/adventure.svg?raw=1" width="1012" alt="Adventure progress: total stardust last 365 days, current and best streak, commits, pull requests, reviews, issues, stars earned, repos charted, top languages and a 52-week contribution heatmap in Teyvat colors">
 
 <br>
 
-<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/constellation.svg?raw=1" width="1012" alt="Repository constellation: the 12 most recently pushed public repositories as plaques with name, language, stars and description">
+<img src="https://raw.githubusercontent.com/RaliqID/RaliqID/output/constellation.svg?raw=1" width="1012" alt="Repository constellation: the 12 most recently pushed public repositories as plaques with name, language, stars and description">
 
 <details>
 <summary><b>▾ Open the remaining charted worlds</b></summary>
 <br>
 
-https://raw.githubusercontent.com/kouji999/kouji999/output/constellation-more.md
+https://raw.githubusercontent.com/RaliqID/RaliqID/output/constellation-more.md
 
 </details>
 
 <br>
 
-<img src="https://raw.githubusercontent.com/kouji999/kouji999/output/github-contribution-grid-snake.svg?raw=1" width="1012" alt="Anemo-teal snake crossing the contribution calendar under a Teyvat night sky">
+<img src="https://raw.githubusercontent.com/RaliqID/RaliqID/output/github-contribution-grid-snake.svg?raw=1" width="1012" alt="Anemo-teal snake crossing the contribution calendar under a Teyvat night sky">
+
+<img src="https://raw.githubusercontent.com/RaliqID/RaliqID/output/trophy-case.svg?raw=1" width="1012" alt="Trophy case: eight self-rendered trophies for commits, total contributions, repositories, longest streak, active days, reviews, pull requests and issues, each with a tier from I to IV and the next threshold to chase">
+
+<br>
 
 <img src="./assets/divider.svg" width="1012" alt="">
 
@@ -273,7 +277,7 @@ Open for trades (ideas), domain runs (pair programming) and event co-op (collabs
 
 <br><br>
 
-<a href="https://github.com/kouji999"><img src="https://img.shields.io/badge/GITHUB-kouji999-23D3C3?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"></a> <img src="https://img.shields.io/badge/CO--OP-OPEN_TO_REQUESTS-E8C877?style=for-the-badge&logoColor=101828" alt="open to co-op requests"> <img src="https://img.shields.io/badge/RESPONSE-FAST_WHEN_AWAKE-B58EE8?style=for-the-badge" alt="response time">
+<a href="https://github.com/RaliqID"><img src="https://img.shields.io/badge/GITHUB-RaliqID-23D3C3?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"></a> <img src="https://img.shields.io/badge/CO--OP-OPEN_TO_REQUESTS-E8C877?style=for-the-badge&logoColor=101828" alt="open to co-op requests"> <img src="https://img.shields.io/badge/RESPONSE-FAST_WHEN_AWAKE-B58EE8?style=for-the-badge" alt="response time">
 
 </td>
 </tr>

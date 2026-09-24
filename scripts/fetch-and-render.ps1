@@ -39,7 +39,7 @@ query($login: String!, $from: DateTime!) {
 }
 '@
 
-$login = 'kouji999'
+$login = 'RaliqID'
 $from = (Get-Date).ToUniversalTime().AddDays(-365).ToString('yyyy-MM-ddTHH:mm:ssZ')
 
 Write-Host 'fetching stats from GitHub GraphQL...'
