@@ -1,0 +1,82 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1012" height="300" viewBox="0 0 1012 300"><title>Trophy case</title><desc>Eight trophies tiered from real account data: commits, total contributions, repositories, longest streak, active days, reviews, pull requests and issues. Locked trophies show what is still needed. Rendered by this repository, so it cannot fail to load.</desc>
+<style><![CDATA[.g{font-family:Georgia,'Times New Roman',serif}.m{font-family:ui-monospace,Consolas,monospace}
+@keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}
+@keyframes tglow{0%,100%{opacity:.08}50%{opacity:.24}}.tglow{animation:tglow 4s ease-in-out infinite}]]></style>
+<defs><linearGradient id="tc" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#131b2e"/><stop offset="1" stop-color="#0e1424"/></linearGradient></defs>
+<rect x="1" y="1" width="1010" height="298" rx="4" fill="url(#tc)" stroke="#e8c877" stroke-opacity=".45"/>
+<rect x="7" y="7" width="998" height="286" rx="2" fill="none" stroke="#e8c877" stroke-opacity=".18"/>
+<text class="m" x="26" y="36" font-size="10.5" fill="#8a7443" letter-spacing="2">TROPHY CASE — 6/8 EARNED · TIERS I–IV</text>
+<rect x="26" y="54" width="238" height="96" rx="6" fill="#0a1226" stroke="#ff9a3c" stroke-opacity="0.5"/>
+<circle class="tglow" cx="70" cy="100" r="34" fill="#ff9a3c" opacity=".1"/>
+<g transform="translate(30 66)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#ff9a3c" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#ff9a3c" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#ff9a3c" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#ff9a3c" opacity="0.8"/></g>
+<text class="g" x="110" y="94" font-size="21" font-weight="bold" fill="#ff9a3c" opacity="1">176</text>
+<text class="m" x="110" y="112" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">COMMITS</text>
+<text class="m" x="110" y="128" font-size="9" fill="#8a7443">II - next at 500</text>
+<rect x="278" y="54" width="238" height="96" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity="0.5"/>
+<circle class="tglow" cx="322" cy="100" r="34" fill="#e8c877" opacity=".1"/>
+<g transform="translate(282 66)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#e8c877" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#e8c877" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#e8c877" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#e8c877" opacity="0.8"/></g>
+<text class="g" x="362" y="94" font-size="21" font-weight="bold" fill="#e8c877" opacity="1">1153</text>
+<text class="m" x="362" y="112" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">STARDUST</text>
+<text class="m" x="362" y="128" font-size="9" fill="#8a7443">III - next at 2500</text>
+<rect x="530" y="54" width="238" height="96" rx="6" fill="#0a1226" stroke="#4cc2f2" stroke-opacity="0.5"/>
+<circle class="tglow" cx="574" cy="100" r="34" fill="#4cc2f2" opacity=".1"/>
+<g transform="translate(534 66)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#4cc2f2" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#4cc2f2" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#4cc2f2" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#4cc2f2" opacity="0.8"/></g>
+<text class="g" x="614" y="94" font-size="21" font-weight="bold" fill="#4cc2f2" opacity="1">27undefined</text>
+<text class="m" x="614" y="112" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">WORLDS</text>
+<text class="m" x="614" y="128" font-size="9" fill="#8a7443">II - next at 30</text>
+<rect x="782" y="54" width="238" height="96" rx="6" fill="#0a1226" stroke="#ff6b4a" stroke-opacity="0.5"/>
+<circle class="tglow" cx="826" cy="100" r="34" fill="#ff6b4a" opacity=".1"/>
+<g transform="translate(786 66)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#ff6b4a" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#ff6b4a" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#ff6b4a" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#ff6b4a" opacity="0.8"/></g>
+<text class="g" x="866" y="94" font-size="21" font-weight="bold" fill="#ff6b4a" opacity="1">47d</text>
+<text class="m" x="866" y="112" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">STREAK</text>
+<text class="m" x="866" y="128" font-size="9" fill="#8a7443">II - next at 100</text>
+<rect x="26" y="164" width="238" height="96" rx="6" fill="#0a1226" stroke="#23d3c3" stroke-opacity="0.5"/>
+<circle class="tglow" cx="70" cy="210" r="34" fill="#23d3c3" opacity=".1"/>
+<g transform="translate(30 176)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#23d3c3" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#23d3c3" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#23d3c3" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#23d3c3" opacity="0.8"/></g>
+<text class="g" x="110" y="204" font-size="21" font-weight="bold" fill="#23d3c3" opacity="1">307undefined</text>
+<text class="m" x="110" y="222" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">ACTIVE DAYS</text>
+<text class="m" x="110" y="238" font-size="9" fill="#8a7443">IV - maxed</text>
+<rect x="278" y="164" width="238" height="96" rx="6" fill="#0a1226" stroke="#8a7443" stroke-opacity="0.25"/>
+
+<g transform="translate(282 176)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#b58ee8" opacity="0.272"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#b58ee8" stroke-opacity="0.22399999999999998" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#b58ee8" opacity="0.22399999999999998"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#b58ee8" opacity="0.256"/></g>
+<text class="g" x="362" y="204" font-size="21" font-weight="bold" fill="#6d7a99" opacity="0.6">0undefined</text>
+<text class="m" x="362" y="222" font-size="9.5" fill="#6d7a99" opacity="0.6" letter-spacing="1">REVIEWS</text>
+<text class="m" x="362" y="238" font-size="9" fill="#8a7443">needs 1</text>
+<rect x="530" y="164" width="238" height="96" rx="6" fill="#0a1226" stroke="#9ee7ff" stroke-opacity="0.5"/>
+<circle class="tglow" cx="574" cy="210" r="34" fill="#9ee7ff" opacity=".1"/>
+<g transform="translate(534 176)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#9ee7ff" opacity="0.85"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#9ee7ff" stroke-opacity="0.7" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#9ee7ff" opacity="0.7"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#9ee7ff" opacity="0.8"/></g>
+<text class="g" x="614" y="204" font-size="21" font-weight="bold" fill="#9ee7ff" opacity="1">2undefined</text>
+<text class="m" x="614" y="222" font-size="9.5" fill="#e8c877" opacity="1" letter-spacing="1">PULL REQUESTS</text>
+<text class="m" x="614" y="238" font-size="9" fill="#8a7443">I - next at 10</text>
+<rect x="782" y="164" width="238" height="96" rx="6" fill="#0a1226" stroke="#8a7443" stroke-opacity="0.25"/>
+
+<g transform="translate(786 176)"><path d="M32 26h24v7a12 12 0 0 1-24 0z" fill="#98e6af" opacity="0.272"/>
+<path d="M30 28h-6a8 8 0 0 0 8 8M58 28h6a8 8 0 0 1-8 8" stroke="#98e6af" stroke-opacity="0.22399999999999998" stroke-width="2" fill="none"/>
+<rect x="41" y="44" width="6" height="9" fill="#98e6af" opacity="0.22399999999999998"/>
+<rect x="33" y="53" width="22" height="4" rx="2" fill="#98e6af" opacity="0.256"/></g>
+<text class="g" x="866" y="204" font-size="21" font-weight="bold" fill="#6d7a99" opacity="0.6">0undefined</text>
+<text class="m" x="866" y="222" font-size="9.5" fill="#6d7a99" opacity="0.6" letter-spacing="1">ISSUES</text>
+<text class="m" x="866" y="238" font-size="9" fill="#8a7443">needs 1</text>
+<text class="m tw" x="986" y="288" text-anchor="end" font-size="9" fill="#7fd8cf" opacity=".7">↻ refreshed 2026-09-24 11:52 UTC</text>
+</svg>

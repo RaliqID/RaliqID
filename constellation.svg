@@ -3,67 +3,67 @@
 @keyframes twinkle{0%,100%{opacity:.15}50%{opacity:1}}.tw{animation:twinkle 3.4s ease-in-out infinite}]]></style>
 <rect x="1" y="1" width="1010" height="386" rx="4" fill="url(#ab2)" stroke="#e8c877" stroke-opacity=".45"/>
 <defs><linearGradient id="ab2" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#131b2e"/><stop offset="1" stop-color="#0e1424"/></linearGradient></defs>
-<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 26 WORLDS · 12 MOST RECENT</text>
+<text class="m" x="32" y="32" font-size="10.5" fill="#8a7443" letter-spacing="2">REPOSITORY CONSTELLATION — 27 WORLDS · 12 MOST RECENT</text>
 <rect x="32" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="70" r="4" fill="#23d3c3"/>
-<text class="g" x="60" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">livn</text>
+<text class="g" x="60" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">noir-studio</text>
 <text class="m" x="326" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="48" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">Personal Life OS — plan, execute, record, meas…</text>
+<text class="m" x="48" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">NOIR — Dark editorial studio landing with real…</text>
 <rect x="352" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="368" cy="70" r="4" fill="#ff9a3c"/>
-<text class="g" x="380" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">striv</text>
-<text class="m" x="646" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="368" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">Striv - AI-powered fitness tracking platform: …</text>
+<text class="g" x="380" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">ProjectPKL</text>
+<text class="m" x="646" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">PHP · ★0</text>
+<text class="m" x="368" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">DOCFLOW — document &amp; transaction operations pr…</text>
 <rect x="672" y="50" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="688" cy="70" r="4" fill="#4cc2f2"/>
-<text class="g" x="700" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">unity-demo</text>
-<text class="m" x="966" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">Other · ★0</text>
-<text class="m" x="688" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="700" y="75" font-size="13.5" font-weight="bold" fill="#e8c877">livn</text>
+<text class="m" x="966" y="75" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="688" y="95" font-size="9.5" fill="#efe6d0" opacity=".8">Personal Life OS — plan, execute, record, meas…</text>
 <rect x="32" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="146" r="4" fill="#b58ee8"/>
-<text class="g" x="60" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">rolling-ball</text>
-<text class="m" x="326" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">C# · ★0</text>
-<text class="m" x="48" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="60" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">striv</text>
+<text class="m" x="326" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
+<text class="m" x="48" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">Striv - AI-powered fitness tracking platform: …</text>
 <rect x="352" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="368" cy="146" r="4" fill="#f7c644"/>
-<text class="g" x="380" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">reelready</text>
-<text class="m" x="646" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">JavaScript · ★0</text>
-<text class="m" x="368" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="380" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">unity-demo</text>
+<text class="m" x="646" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">Other · ★0</text>
+<text class="m" x="368" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">Unity playground - experiments and demos built…</text>
 <rect x="672" y="126" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="688" cy="146" r="4" fill="#9ee7ff"/>
-<text class="g" x="700" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">pempek-kelompok-6</text>
-<text class="m" x="966" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">CSS · ★0</text>
-<text class="m" x="688" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="700" y="151" font-size="13.5" font-weight="bold" fill="#e8c877">rolling-ball</text>
+<text class="m" x="966" y="151" text-anchor="end" font-size="9.5" fill="#6d7a99">C# · ★0</text>
+<text class="m" x="688" y="171" font-size="9.5" fill="#efe6d0" opacity=".8">Rolling Ball - Unity rolling-ball game exercis…</text>
 <rect x="32" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="222" r="4" fill="#98e6af"/>
-<text class="g" x="60" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">food-website</text>
-<text class="m" x="326" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">HTML · ★0</text>
-<text class="m" x="48" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="60" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">reelready</text>
+<text class="m" x="326" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">JavaScript · ★0</text>
+<text class="m" x="48" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">ReelReady - short-form video tooling prototype</text>
 <rect x="352" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="368" cy="222" r="4" fill="#23d3c3"/>
-<text class="g" x="380" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">GamesTest</text>
-<text class="m" x="646" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">ASP.NET · ★0</text>
-<text class="m" x="368" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="380" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">pempek-kelompok-6</text>
+<text class="m" x="646" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">CSS · ★0</text>
+<text class="m" x="368" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">Pempek Kelompok 6 - collaborative front-end co…</text>
 <rect x="672" y="202" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="688" cy="222" r="4" fill="#ff9a3c"/>
-<text class="g" x="700" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">ReelUp</text>
-<text class="m" x="966" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="688" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="700" y="227" font-size="13.5" font-weight="bold" fill="#e8c877">food-website</text>
+<text class="m" x="966" y="227" text-anchor="end" font-size="9.5" fill="#6d7a99">HTML · ★0</text>
+<text class="m" x="688" y="247" font-size="9.5" fill="#efe6d0" opacity=".8">Food website - front-end coursework project (H…</text>
 <rect x="32" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="48" cy="298" r="4" fill="#4cc2f2"/>
-<text class="g" x="60" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">cheat-clip-pro-2</text>
-<text class="m" x="326" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="48" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="g" x="60" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">GamesTest</text>
+<text class="m" x="326" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">ASP.NET · ★0</text>
+<text class="m" x="48" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">GamesTest - scratch space for testing game mec…</text>
 <rect x="352" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="368" cy="298" r="4" fill="#b58ee8"/>
-<text class="g" x="380" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">KAGE</text>
+<text class="g" x="380" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">ReelUp</text>
 <text class="m" x="646" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="368" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
+<text class="m" x="368" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">ReelUp - short-form video processing experiment</text>
 <rect x="672" y="278" width="306" height="64" rx="6" fill="#0a1226" stroke="#e8c877" stroke-opacity=".26"/>
 <circle cx="688" cy="298" r="4" fill="#f7c644"/>
-<text class="g" x="700" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">oracle-bot</text>
+<text class="g" x="700" y="303" font-size="13.5" font-weight="bold" fill="#e8c877">cheat-clip-pro-2</text>
 <text class="m" x="966" y="303" text-anchor="end" font-size="9.5" fill="#6d7a99">TypeScript · ★0</text>
-<text class="m" x="688" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">undocumented world</text>
-<text class="m" x="32" y="374" font-size="10.5" fill="#e8c877" opacity=".85">▾ 14 more worlds charted — open the folded list below</text>
-<text class="m tw" x="980" y="374" text-anchor="end" font-size="9" fill="#7fd8cf" opacity=".7">↻ refreshed 2026-09-23 23:38 UTC</text>
+<text class="m" x="688" y="323" font-size="9.5" fill="#efe6d0" opacity=".8">Cheat Clip Pro 2 - second iteration of the vid…</text>
+<text class="m" x="32" y="374" font-size="10.5" fill="#e8c877" opacity=".85">▾ 15 more worlds charted — open the folded list below</text>
+<text class="m tw" x="980" y="374" text-anchor="end" font-size="9" fill="#7fd8cf" opacity=".7">↻ refreshed 2026-09-24 11:52 UTC</text>
 </svg>
