@@ -151,11 +151,11 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td valign="top" align="center">
 
-<img src="./assets/orb-void.svg" width="80" alt="sealed elemental orb">
+<a href="https://github.com/RaliqID/signal-lost"><img src="./assets/img/skirk.png" width="80" alt="Skirk"></a>
 
-**???** · Unknown
-<sub>A Snezhnaya-bound repo is hatching…</sub>
-<kbd>WAITING</kbd>
+**SIGNAL LOST** · Cryo
+<sub>Abandoned station. An AI with secrets. 3 endings.</sub>
+<kbd>LV.88</kbd>
 
 </td>
 </tr>
@@ -277,7 +277,11 @@ Open for trades (ideas), domain runs (pair programming) and event co-op (collabs
 
 <br><br>
 
-<a href="https://github.com/RaliqID"><img src="https://img.shields.io/badge/GITHUB-RaliqID-23D3C3?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"></a> <img src="https://img.shields.io/badge/CO--OP-OPEN_TO_REQUESTS-E8C877?style=for-the-badge&logoColor=101828" alt="open to co-op requests"> <img src="https://img.shields.io/badge/RESPONSE-FAST_WHEN_AWAKE-B58EE8?style=for-the-badge" alt="response time">
+<a href="https://github.com/RaliqID"><img src="https://img.shields.io/badge/GITHUB-RaliqID-23D3C3?style=for-the-badge&logo=github&logoColor=white" alt="GitHub profile"></a> <a href="https://www.tiktok.com/@veeyroonn"><img src="https://img.shields.io/badge/TIKTOK-veeyroonn-E8C877?style=for-the-badge&logo=tiktok&logoColor=101828" alt="TikTok: veeyroonn"></a> <img src="https://img.shields.io/badge/CO--OP-OPEN_TO_REQUESTS-E8C877?style=for-the-badge&logoColor=101828" alt="open to co-op requests"> <img src="https://img.shields.io/badge/RESPONSE-FAST_WHEN_AWAKE-B58EE8?style=for-the-badge" alt="response time">
+
+<br>
+
+<sub>🎬 <b>Also on TikTok</b> — <a href="https://www.tiktok.com/@veeyroonn">@veeyroonn</a>, where the builds get shown off.</sub>
 
 </td>
 </tr>
