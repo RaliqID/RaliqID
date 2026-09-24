@@ -151,7 +151,7 @@ SLEEP      ████░░░░░░░░░░░░░░░░  critica
 </td>
 <td valign="top" align="center">
 
-<a href="https://github.com/RaliqID/signal-lost"><img src="./assets/img/skirk.png" width="80" alt="Skirk"></a>
+<a href="https://github.com/RaliqID/signal-lost"><img src="./assets/img/skirk.png?v=2" width="80" alt="Skirk"></a>
 
 **SIGNAL LOST** · Cryo
 <sub>Abandoned station. An AI with secrets. 3 endings.</sub>
