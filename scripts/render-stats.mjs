@@ -180,7 +180,7 @@ ${glow}
 <g transform="translate(${x + 4} ${y + 12})">${cup}</g>
 <text class="g" x="${x + 84}" y="${y + 40}" font-size="21" font-weight="bold" fill="${lit ? d.color : DIM}" opacity="${lit ? 1 : 0.6}">${d.value}${d.unit}</text>
 <text class="m" x="${x + 84}" y="${y + 58}" font-size="9.5" fill="${lit ? GOLD : DIM}" opacity="${lit ? 1 : 0.6}" letter-spacing="1">${d.label}</text>
-<text class="m" x="${x + 84}" y="${y + 74}" font-size="9" fill="${GOLD_DIM}">${lit ? roman[t] + ' — ' + sub.split('·').slice(1).join('·').trim() : sub}</text>`;
+<text class="m" x="${x + 84}" y="${y + 74}" font-size="9" fill="${GOLD_DIM}">${lit ? `${roman[t]} - ${progress}` : progress}</text>`;
   };
 
   const earned = defs.filter(d => tierOf(d.value, d.tiers) > 0).length;
