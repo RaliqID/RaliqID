@@ -178,7 +178,7 @@ if (tail.length) {
     return `<rect x="${x}" y="${y}" width="${tw}" height="${th}" rx="6" fill="#0a1226" stroke="${lit ? d.color : GOLD_DIM}" stroke-opacity="${lit ? 0.5 : 0.25}"/>
 ${glow}
 <g transform="translate(${x + 4} ${y + 12})">${cup}</g>
-<text class="g" x="${x + 84}" y="${y + 40}" font-size="21" font-weight="bold" fill="${lit ? d.color : DIM}" opacity="${lit ? 1 : 0.6}">${d.value}${d.unit}</text>
+<text class="g" x="${x + 84}" y="${y + 40}" font-size="21" font-weight="bold" fill="${lit ? d.color : DIM}" opacity="${lit ? 1 : 0.6}">${d.value}${d.unit ?? ''}</text>
 <text class="m" x="${x + 84}" y="${y + 58}" font-size="9.5" fill="${lit ? GOLD : DIM}" opacity="${lit ? 1 : 0.6}" letter-spacing="1">${d.label}</text>
 <text class="m" x="${x + 84}" y="${y + 74}" font-size="9" fill="${GOLD_DIM}">${lit ? `${roman[t]} - ${progress}` : progress}</text>`;
   };
