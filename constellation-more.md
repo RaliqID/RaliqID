@@ -1,10 +1,10 @@
-1. **KAGE** — `TypeScript`<br><sub>KAGE - TypeScript application project</sub>
+1. **PempekPedia** — `CSS`<br><sub>Pempek Kelompok 6 - collaborative front-end coursework project</sub>
 
-2. **oracle-bot** — `TypeScript`<br><sub>Oracle Bot - automation bot built with TypeScript</sub>
+2. **cheat-clip-pro-2** — `TypeScript`<br><sub>Cheat Clip PRO - AI YouTube clipper producing 9:16 viral shorts with karaoke captions, face tracking and NVENC GPU rendering. React 19 + FastAPI + FFmpeg</sub>
 
-3. **aether-landing** — `TypeScript`<br><sub>Aether - animated landing page experiment built with React and modern CSS motion</sub>
+3. **KAGE** — `TypeScript`<br><sub>KAGE - TypeScript desktop application with QR pairing and session management</sub>
 
-4. **reelshq** — `TypeScript`<br><sub>Reelshq - short-form video pipeline prototype</sub>
+4. **oracle-bot** — `TypeScript`<br><sub>Oracle Bot - TypeScript automation bot with pluggable command and scheduling modules</sub>
 
 5. **techcore-landing** — `TypeScript`<br><sub>TechCore — 3D dark tech landing page with interactive Blender-built hero (React Three Fiber + Draco GLB, seamless loop, a11y)</sub>
 
