@@ -1,14 +1,14 @@
-1. **aether-landing** — `TypeScript`<br><sub>Aether - animated landing page with scroll-driven motion, built on React + TypeScript + Tailwind</sub>
+1. **cheat-clip-pro-2** — `TypeScript`<br><sub>Cheat Clip PRO - AI YouTube clipper producing 9:16 viral shorts with karaoke captions, face tracking and NVENC GPU rendering. React 19 + FastAPI + FFmpeg</sub>
 
-2. **SmartStudy-AI** — `JavaScript`<br><sub>SmartStudy AI — E-learning platform with AI tutor streaming, gamified quizzes, and progress tracking. Laravel + Inertia + React + Tailwind.</sub>
+2. **aether-landing** — `TypeScript`<br><sub>Aether - animated landing page with scroll-driven motion, built on React + TypeScript + Tailwind</sub>
 
-3. **PempekPedia** — `CSS`<br><sub>Pempek Kelompok 6 - collaborative front-end coursework project</sub>
+3. **SmartStudy-AI** — `JavaScript`<br><sub>SmartStudy AI — E-learning platform with AI tutor streaming, gamified quizzes, and progress tracking. Laravel + Inertia + React + Tailwind.</sub>
 
-4. **KAGE** — `TypeScript`<br><sub>KAGE - Personal AI WhatsApp agent that replies in your voice via a 10-stage pipeline (Baileys, Fastify, SQLite, LLM + TTS) with risk-gated owner approval</sub>
+4. **PempekPedia** — `CSS`<br><sub>Pempek Kelompok 6 - collaborative front-end coursework project</sub>
 
-5. **GamesTest** — `ASP.NET`<br><sub>Signal Lost (archived) - Unity demo build archive. Contains compiled Windows player only, no source (Unity build output).</sub>
+5. **KAGE** — `TypeScript`<br><sub>KAGE - Personal AI WhatsApp agent that replies in your voice via a 10-stage pipeline (Baileys, Fastify, SQLite, LLM + TTS) with risk-gated owner approval</sub>
 
-6. **ProjectPKL** — `PHP`<br><sub>DOCFLOW — document & transaction operations prototype for a PKL case study. Laravel + PostgreSQL + React/TypeScript.</sub>
+6. **GamesTest** — `ASP.NET`<br><sub>Signal Lost (archived) - Unity demo build archive. Contains compiled Windows player only, no source (Unity build output).</sub>
 
 7. **livn** — `TypeScript`<br><sub>Personal Life OS — plan, execute, record, measure, reflect. Next.js + TypeScript + Prisma + PostgreSQL.</sub>
 
