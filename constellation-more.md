@@ -1,8 +1,8 @@
-1. **cheat-clip-pro-2** — `TypeScript`<br><sub>Cheat Clip PRO - AI YouTube clipper producing 9:16 viral shorts with karaoke captions, face tracking and NVENC GPU rendering. React 19 + FastAPI + FFmpeg</sub>
+1. **food-website** — `HTML`<br><sub>Foodie - responsive restaurant front-end built with vanilla HTML, CSS and JavaScript</sub>
 
-2. **aether-landing** — `TypeScript`<br><sub>Aether - animated landing page with scroll-driven motion, built on React + TypeScript + Tailwind</sub>
+2. **cheat-clip-pro-2** — `TypeScript`<br><sub>Cheat Clip PRO - AI YouTube clipper producing 9:16 viral shorts with karaoke captions, face tracking and NVENC GPU rendering. React 19 + FastAPI + FFmpeg</sub>
 
-3. **SmartStudy-AI** — `JavaScript`<br><sub>SmartStudy AI — E-learning platform with AI tutor streaming, gamified quizzes, and progress tracking. Laravel + Inertia + React + Tailwind.</sub>
+3. **aether-landing** — `TypeScript`<br><sub>Aether - animated landing page with scroll-driven motion, built on React + TypeScript + Tailwind</sub>
 
 4. **PempekPedia** — `CSS`<br><sub>Pempek Kelompok 6 - collaborative front-end coursework project</sub>
 
